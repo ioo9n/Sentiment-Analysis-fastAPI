@@ -153,7 +153,7 @@ joblib.dump(model, 'sentiment_model.pkl')
 
 print("  Vectorizer and model saved!")
 
-!pip install fastapi uvicorn pyngrok nest-asyncio
+
 
 from pyngrok import ngrok
 ngrok.set_auth_token("3HlHspxMEqd7yvrkLRHgUDQUFYX_62bCCfgc4ZohFTQT6QqxA")
