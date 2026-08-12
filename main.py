@@ -155,13 +155,9 @@ print("  Vectorizer and model saved!")
 
 
 
-from pyngrok import ngrok
-ngrok.set_auth_token("3HlHspxMEqd7yvrkLRHgUDQUFYX_62bCCfgc4ZohFTQT6QqxA")
-
 from fastapi import FastAPI
 from pydantic import BaseModel
-import nest_asyncio
-from pyngrok import ngrok
+
 import uvicorn
 import joblib
 import re
@@ -170,7 +166,6 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 
-ngrok.kill()
 
 
 nltk.download('punkt', quiet=True)
@@ -219,11 +214,4 @@ def predict_sentiment(request: TweetRequest):
         "sentiment": sentiment
     }
 
-nest_asyncio.apply()
-public_url = ngrok.connect(8000)
-print(f"Your url code: {public_url.public_url}")
 
-# server
-config = uvicorn.Config(app, host="127.0.0.1", port=8000, log_level="info")
-server = uvicorn.Server(config)
-await server.serve()
