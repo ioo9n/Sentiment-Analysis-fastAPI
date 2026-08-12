@@ -16,7 +16,7 @@ stop_words = set(stopwords.words('english'))
 lemmatizer = WordNetLemmatizer()
 
 # تحميل النموذج والـ Vectorizer الجاهزين مسبقاً
-vectorizer = joblib.load('tfidf_vectorizer.pkl')
+vectorizer = joblib.load('tfidf_vectorizer-2.pkl')
 model = joblib.load('sentiment_model.pkl')
 
 app = FastAPI(title="Sentiment Analysis API", version="1.0")
