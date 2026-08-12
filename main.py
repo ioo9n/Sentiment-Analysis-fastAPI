@@ -226,4 +226,4 @@ print(f"Your url code: {public_url.public_url}")
 # server
 config = uvicorn.Config(app, host="127.0.0.1", port=8000, log_level="info")
 server = uvicorn.Server(config)
-await server.serve()https://blurb-autopilot-impaired.ngrok-free.dev/$0
+await server.serve()
