@@ -1,7 +1,8 @@
 fastapi
 uvicorn
+pydantic
 joblib
 nltk
-pydantic
-nest_asyncio
-pyngrok
+scikit-learn
+numpy
+pandas
